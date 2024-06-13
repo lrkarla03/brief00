@@ -1,0 +1,50 @@
+body {
+    background-color: #f5f5dc; /* light beige */
+    font-family: 'Dancing Script', cursive; /* vintage font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.heart-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.heart {
+    width: 10px;
+    height: 10px;
+    background-color: #ffb6c1; /* baby pink */
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffb6c1;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -5px;
+    left: -5px;
+}
+
+.heart::after {
+    top: -5px;
+    left: 0;
+    transform: rotate(90deg);
+}
